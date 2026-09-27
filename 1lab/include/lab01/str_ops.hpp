@@ -1,7 +1,7 @@
 #pragma once
 #include <cstddef>
-#include <iostream>
 #include <cstring>
+#include <iostream>
 #include <limits>
 
 namespace lab01 {
@@ -13,4 +13,4 @@ void str_print(const char* s);
 void str_to_upper(char* str);
 std::size_t str_count_char(const char* s, char ch);
 char* str_read_line();
-}
+}  // namespace lab01

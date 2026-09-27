@@ -1,6 +1,8 @@
 #include "str_ops.hpp"
-#include <gtest/gtest.h>
+
 #include <string>
+
+#include <gtest/gtest.h>
 
 TEST(StrOpsTest, StrLen) {
     EXPECT_EQ(lab01::str_len("Hello, World!"), 13u);
@@ -45,9 +47,9 @@ TEST(StrOpsTest_Fail, StrDeleteNullptr) {
 
 TEST(StrOpsTest, StrPrint) {
     const char* str = "Hello, World!";
-    testing::internal::CaptureStdout(); // захват вывода
+    testing::internal::CaptureStdout();  // захват вывода
     lab01::str_print(str);
-    std::string output = testing::internal::GetCapturedStdout(); // получение захваченного вывода
+    std::string output = testing::internal::GetCapturedStdout();  // получение захваченного вывода
     EXPECT_EQ(output, "Hello, World!\n");
 }
 
@@ -69,7 +71,7 @@ TEST(StrOpsTest, StrCountChar) {
     const char* str = "Hello, World!";
     EXPECT_EQ(lab01::str_count_char(str, 'o'), 2u);
     EXPECT_EQ(lab01::str_count_char(str, 'l'), 3u);
-    EXPECT_EQ(lab01::str_count_char(str, 'z'), 0u); 
+    EXPECT_EQ(lab01::str_count_char(str, 'z'), 0u);
 }
 
 TEST(StrOpsTest_Fail, StrCountCharNullptr) {
